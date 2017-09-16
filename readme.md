@@ -1,4 +1,4 @@
-# what is ts-map？
+# What is ts-map？
 
 it is a Map structure like ES6 Map. Map is similar to the object, but also a set of key-value pairs, but the "key" range is not limited to strings, various types of values (including objects) can be used as a key.
 
