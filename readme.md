@@ -1,14 +1,14 @@
-## what is ts-map？
+# what is ts-map？
 
 it is a Map structure like ES6 Map. Map is similar to the object, but also a set of key-value pairs, but the "key" range is not limited to strings, various types of values (including objects) can be used as a key.
 
-## Installation
+# Installation
 
 ```bash
 npm install ts-map
 ```
 
-## Usage
+# Usage
 
 use in typescript file
 
@@ -35,9 +35,9 @@ map.forEach((value, key, map) => {
 // true ':' 'map'
 ```
 
-## Getting started
+# Getting started
 
-### Constructor with parameter
+## Constructor with parameter
 
 You can pass in the default parameters in the constructor:
 
@@ -50,7 +50,7 @@ const map = new TsMap([
 console.log(map.get(1)) // ok
 ```
 
-### Class generic
+## Class generic
 
 support define generic for ts-map
 
@@ -70,9 +70,9 @@ map.set(3, "jack") // sorry, error
 
 If you do not define generics, but in the constructor passed in the parameters, you also need follow the generic rules.If you do not use generics, you can set any type of key-value pairs for the map.
 
-### API
+## API
 
-#### size: number
+### size: number
 
 return the Map's size
 
@@ -85,7 +85,7 @@ map.set(2, {name: "tom"})
 map.size // 2
 ```
 
-#### set(k: K, v: V): TsMapInter<K, V>
+### set(k: K, v: V): TsMapInter<K, V>
 
 set a key-value to Map, support chain called.
 
@@ -110,7 +110,7 @@ map.set(1, "111").set(1, "222")
 map.get(1) // 222
 ```
 
-#### get(k: K): V | undefined
+### get(k: K): V | undefined
 
 Return the value of the corresponding key,if dosn't include, return undefind.
 
@@ -120,7 +120,7 @@ map.get(1) // 111
 map.get(2) // undefind
 ```
 
-#### has(k: K): boolean
+### has(k: K): boolean
 
 Determine if a key is included.
 
@@ -130,7 +130,7 @@ map.has(1) // true
 map.has(2) // false
 ```
 
-#### delete(k: k): boolean
+### delete(k: k): boolean
 
 Delete all the corresponding keys and its value, if detele success, return true. else return false.
 
@@ -142,7 +142,7 @@ map.has(1) //false
 mao.size // 1
 ```
 
-#### clear(): void
+### clear(): void
 
 Delete all key-value from the Map.
 
@@ -154,7 +154,7 @@ map.clear()
 map.size // 0
 ```
 
-#### keys(): K[]
+### keys(): K[]
 
 return all Map's key.
 
@@ -176,7 +176,7 @@ map.set(["1"], {name: 'lavyun'})
 map.values() // [2, false, 'lavyun']
 ```
 
-#### entries(): Array<[K, V]>
+### entries(): Array<[K, V]>
 
 return all Map's key-value.
 ```ts
@@ -193,7 +193,7 @@ map.entries()
 */
 ```
 
-#### forEach(cb, context?: any): void
+### forEach(cb, context?: any): void
 
 Traversal the Map.Accept two parameters, first is a callback, second is a optional context.
 
@@ -223,6 +223,6 @@ map.forEach((value, key, map) => {
 // 2 - '222' - 'lavyun'
 ```
 
-### Licence
+## Licence
 
 MIT LICENCE
