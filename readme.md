@@ -165,7 +165,7 @@ map.set(["1"], {name: 'lavyun'})
 map.keys() // [1, true, ["1"]]
 ```
 
-#### values(): V[]
+### values(): V[]
 
 return all Map's value.
 
