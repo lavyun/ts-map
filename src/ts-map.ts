@@ -76,7 +76,6 @@ export default class TsMap<K, V> {
   // if dosn't has, return undefind.
   get(k: K): V | undefined {
     const ks: K[] = this.keyStore
-    console.log(ks)
     for (let i = ks.length; i > -1; i--) {
       if (ks[i] === k) {
         return this.valueStore[i]

@@ -49,7 +49,6 @@ var TsMap = (function () {
     // if dosn't has, return undefind.
     TsMap.prototype.get = function (k) {
         var ks = this.keyStore;
-        console.log(ks);
         for (var i = ks.length; i > -1; i--) {
             if (ks[i] === k) {
                 return this.valueStore[i];
