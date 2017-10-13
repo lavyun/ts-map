@@ -22,7 +22,7 @@ map.set(1, "hello")
 map.set(k2, "ts").set(k3, "map")
 
 map.get(1) // "hello"
-map.get(k2) // "world"
+map.get(k2) // "ts"
 map.size // 3
 map.keys() // [1, [2], true]
 map.values() // ["hello", "ts", "map"]
