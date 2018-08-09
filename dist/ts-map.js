@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var TsMap = (function () {
+var TsMap = /** @class */ (function () {
     // Accept an optional parameter,
     // The parameter's type:
     // [
@@ -71,11 +71,13 @@ var TsMap = (function () {
     // else return false.
     TsMap.prototype.delete = function (k) {
         var ks = this.keyStore;
+        var vs = this.valueStore;
         var len = ks.length;
         var deleteFlag = false;
         while (len--) {
             if (ks[len] === k) {
                 ks.splice(len, 1);
+                vs.splice(len, 1);
                 this.size--;
                 deleteFlag = true;
             }

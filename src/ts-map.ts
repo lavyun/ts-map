@@ -100,12 +100,14 @@ export default class TsMap<K, V> {
   // if detele success, return true.
   // else return false.
   delete(k: K): boolean {
-    const ks: K[] = this.keyStore
+	const ks: K[] = this.keyStore
+	const vs: V[] = this.valueStore
     let len: number = ks.length
     let deleteFlag: boolean = false
     while (len--) {
       if (ks[len] === k) {
-        ks.splice(len, 1)
+		ks.splice(len, 1)
+		vs.splice(len, 1)
         this.size--
         deleteFlag = true
       }
